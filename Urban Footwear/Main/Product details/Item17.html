@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <section id="header">
+        <nav>
+            <img src="../images/lg.png">
+            <ul class="menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#shop">Shop</a></li>
+                <li><a href="../index.html#offers">Offers</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-arrow-left removemenu" id="remove"></i>
+            </ul>
+            <span>
+                <a><i class="fa-solid fa-cart-shopping shpcart"></i></a>
+                <a href="../Login/login.html"><i class="fa-regular fa-user"></i>
+                </a><i class="fa-solid fa-bars menubars" id="bars"></i>
+            </span>
+        </nav>
+        <div id="product-detail">
+            <div class="top-details">
+                <div class="pic">
+                    <img src="../Items/item17.jpeg" class="product-image">
+                </div>
+                <div class="details">
+                    <h1 class="product-name">Jordan 1 Retro Low OG SP Travis Scott Black Phantom</h1>
+                    <h3>Men's Shoes</h3>
+                    <div class="price">
+                        <p>₱</p>
+                        <h2 class="product-price">55000</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-details">
+                <div class="description">
+                    <p>
+                        Following leaks this past July, official images of said Travis Scott x Air Jordan 1 
+                        Low have finally surfaced, albeit only in the Preschool size. By the looks of it, the design appears 
+                        faithful to its adult counterpart, sporting few changes across both the construction and branding. 
+                        The backwards Swoosh, as expected, is affixed only to the lateral side, outlined with white stitching
+                         much like the adjacent paneling. Behind, the Wings and Bee-shaped embroidery — the latter of which 
+                         ostensibly pays homage to Stormi, Travis Scott’s daughter — are highlighted in the same neutral, further 
+                         contrasting the blacked out look the rest of the shoe employs.
+                    </p>
+                    <ul>
+                        <li>Colour Shown: Black/Phantom-Ale Brown-Racer Blue-Team Orange</li>
+                        <li>Style: DM7866-001</li>
+                    </ul>
+                    
+                    
+                    <div class="product-review">
+                        <div class="review-header">
+                            <h1>Product Review</h1>
+                        </div>
+                        <form id="reviewForm">
+                            <div class="star-rating">
+                                <input type="radio" id="5-stars" name="rating" value="5">
+                                <label for="5-stars" class="star">&#9733;</label>
+                                <input type="radio" id="4-stars" name="rating" value="4">
+                                <label for="4-stars" class="star">&#9733;</label>
+                                <input type="radio" id="3-stars" name="rating" value="3">
+                                <label for="3-stars" class="star">&#9733;</label>
+                                <input type="radio" id="2-stars" name="rating" value="2">
+                                <label for="2-stars" class="star">&#9733;</label>
+                                <input type="radio" id="1-star" name="rating" value="1">
+                                <label for="1-star" class="star">&#9733;</label>
+                            </div>
+                            <div class="comment">
+                                <label for="comment">Comment:</label><br>
+                                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+                            </div>
+                            <div class="review-btn">
+                                <button type="button" onclick="submitReview()">Submit</button>
+                                <button type="button" onclick="resetForm()">Reset</button>
+                            </div>
+                        </form>
+                        <div class="review-result">
+                            <h2>Your Review</h2>
+                            <div id="reviewOutput"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="size-selection">
+                    <h3>Sizes</h3>
+                    <div class="shoes-sizes">
+                        <div class="size-row">
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 6 / W 7.5')">US M 6 / W 7.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 8 / W 9.5')">US M 8/ W 9.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 10 / W 11.5')">US M 10 / W 11.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 12 / W 13.5')">US M 12 / W 13.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 15 / W 16.5')">US M 15 / W 16.5</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 6.5 / W 8')">US M 6.5 / W 8</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 8.5 / W 10')">US M 8.5 / W 10</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 10.5 / W 12')">US M 10.5 / W 12</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 12.5 / W 14')">US M 12.5 / W 14</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 7 / W 8.5')">US M 7 / W 8.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 9 / W 10.5')">US M 9 / W 10.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 11 / W 12.5')">US M 11 / W 12.5</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 13 / W 14.5')">US M 13 / W 14.5</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 7.5 / W 9.5')">US M 7.5 / W 9</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 9.5 / W 11')">US M 9.5 / W 11</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 11.5 / W 13')">US M 11.5 / W 13</button>
+                            </div>
+                            <div class="sizes">
+                                <button onclick="selectSize('US M 14 / W 15.5')">US M 14 / W 15.5</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkoutButtons">
+                        <div class="add-cart" id="addToCartBtn">
+                            <button onclick="addToCart()">Add to Cart</button>
+                        </div>
+                        <div class="fav-button">
+                            <button>Favourite <i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="side">
+        <div class="cart-container">
+            <h2>CART</h2>
+            <div class="cart-product-container">
+                <div class="cart">
+                    <!-- Items will be dynamically inserted here -->
+                </div>
+            </div>
+            <p class="total">Total Price of All Items: ₱<span id="total-price"></span></p>
+            <button class="clear" onclick="resetCart()">Reset Cart</button>
+
+            <div class="cart-buttons">
+                <div class="close" id="close">
+                    <button>CLOSE</button>
+                </div>
+                <div class="checkout">
+                    <a href="checkout.htm"><button>CHECK OUT</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="items.js ">
+
+    </script>
+
+</body>
+
+</html>

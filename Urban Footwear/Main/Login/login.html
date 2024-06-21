@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- Link for icons -->
+    <script src="https://kit.fontawesome.com/6f666b32cf.js" crossorigin="anonymous"></script>
+    <title>Login and Signup</title>
+</head>
+
+<body>
+    <a class="back" id="back"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="wrapper">
+        <div class="container" id="container">
+            <div class="signin">
+                <form method="POST" onsubmit="validateForm(event)">
+                    <h1>Welcome</h1>
+                    <span>Enter your credentials to login</span>
+                    <div class="input_container">
+                        <div class="signin_user">
+                            <span class="input_icons">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="email" class="signin_input" id="username" placeholder="Email" required>
+                        </div>
+                        <div class="signin_pass">
+                            <span class="input_icons">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" class="signin_input" id="pass" name="pass" placeholder="Password" required>
+                        </div>
+                        <p><input type="checkbox" name="checkbox" id="checkbox" onclick="togglePass()">Show Password</p>
+                        <input type="submit" class="btn" id="submit" value="Log in" name="signIn">
+                        <label class="f"><a class="forgot" href="#">Forgot your password?</a></label>
+                        <span class="s_with">or signin with</span>
+                        <div class=" social_icons">
+                            <a href="#" class="icons"> <i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="icons"> <i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="#" class="icons"> <i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icons"> <i class="fa-brands fa-google"></i></a>
+                        </div>
+                        <div class="dont_have">
+                            <p>Don't have an account? <a class="signup_link" onclick="signUp()" href="#">Signup</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="signup">
+                <form method="POST" action="index.html">
+                    <h1>Sign Up</h1>
+                    <span>Create your account</span>
+                    <div class="signup_container">
+                        <input type="text" class="signup_input" name="fname" placeholder="Firstname" required>
+                        <input type="text" class="signup_input" name="lname" placeholder="Lastname" required>
+                        <input type="email" class="signup_input" name="username" placeholder="Email" required>
+                        <input type="password" class="signup_input" name="pwsd" placeholder="Create password" required>
+                        <input type="password" class="signup_input" name="pwsd" placeholder="Confirm password" required>
+                        <p><input type="checkbox" name="checkbox" id="checkbox" onclick="togglePasswords()">Show Password</p>
+                    </div>
+                    <input type="submit" class="btn" name="signUp" value="Sign up">
+                    <p class="already">Already have an account? <a class="signin_link" onclick="signIn()" href="#">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

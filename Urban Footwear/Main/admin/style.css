@@ -1,0 +1,97 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1, .hero p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.featured-products .card, .new-arrivals .card, .best-sellers .card, .popular-brands .card {
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.featured-products .card:hover, .new-arrivals .card:hover, .best-sellers .card:hover, .popular-brands .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-banner {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0;
+}
+
+.promo-banner h2 {
+    margin: 0;
+}
+
+.promo-banner .btn-light {
+    margin-top: 10px;
+}
+
+.popular-brands, .new-arrivals, .best-sellers {
+    padding: 60px 0;
+}
+
+.popular-brands .card, .new-arrivals .card, .best-sellers .card {
+    margin-bottom: 30px;
+}
+
+.hero {
+    background-image: url('Hero.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+.featured-shoe {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.featured-shoe .card {
+    border: none;
+    box-shadow: none;
+}
+
+.featured-shoe .card-img-top {
+    object-fit: cover;
+    height: 400px;
+}
+
+.featured-shoe .card-body {
+    text-align: center;
+}
+
+.featured-shoe .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.featured-shoe .card-text {
+    font-size: 1.4rem;
+    color: #6c757d;
+}
+
+.featured-shoe button.btn-outline-dark {
+    font-size: 1.2rem;
+}
+
+.featured-shoe button.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.2rem;
+}
+
+.featured-shoe button.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}

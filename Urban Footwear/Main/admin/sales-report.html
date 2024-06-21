@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store - Sales Report</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Shoe Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kids</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Flash Sale</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/sales-report.html">Sales Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i> Cart</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Monthly Sales Report Section -->
+    <section class="sales-report py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Monthly Sales Report</h2>
+            <canvas id="salesChart" width="400" height="200"></canvas>
+        </div>
+    </section>
+
+    <script>
+        
+    </script>
+
+    <!-- Annual Sales Report Section -->
+    <section class="annual-sales-report py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Annual Sales Report</h2>
+            <canvas id="annualSalesChart" width="400" height="200"></canvas>
+        </div>
+    </section>
+
+    <script>
+        var ctx = document.getElementById('salesChart').getContext('2d');
+var salesChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+            {
+                label: 'Monthly Sales',
+                data: [12000, 19000, 3000, 5000, 20000, 30000, 45000],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+var ctxAnnual = document.getElementById('annualSalesChart').getContext('2d');
+var annualSalesChart = new Chart(ctxAnnual, {
+    type: 'line',
+    data: {
+        labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+        datasets: [
+            {
+                label: 'Annual Sales',
+                data: [120000, 190000, 300000, 500000, 200000, 300000],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                fill: false
+            }
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+    </script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+</html>
